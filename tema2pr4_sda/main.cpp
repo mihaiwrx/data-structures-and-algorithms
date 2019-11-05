@@ -3,11 +3,11 @@
 using namespace std;
 
 struct nod{
-    int valoare;
+    float valoare;
     nod* next;
 };
 
-void adaugare_final(nod* &primul, int val){
+void adaugare_final(nod* &primul, float val){
     if(primul == NULL){
         primul = new nod;
         primul->valoare = val;
@@ -25,7 +25,7 @@ void adaugare_final(nod* &primul, int val){
     }
 }
 
-void inserare(nod* &primul, int numar){
+void inserare(nod* &primul, float numar){
     nod* mijloc = new nod;
     mijloc->valoare = numar;
     nod* aux = primul->next;
@@ -34,7 +34,7 @@ void inserare(nod* &primul, int numar){
 }
 
 void modificare_lista(nod* &primul){
-    int ma=0;
+    float ma=0;
     if(primul->next == NULL)
         cout<<"Eroare";
     else{
